@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quora</title>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <link rel="stylesheet" href="Quora-CSS.css">
+        <script src="Quora_JS.js"></script>
+        
+
+    </head>
+    <body>
+
+        <div id="particles-js"></div>
+
+        <header class="main-header">
+
+            <div class="header-left">
+                <img src="logo.svg" alt="logo">
+
+            </div>
+
+            <div class="search-container">
+                <div class="search-bar-cover">
+                    <i class="search-icon"><img src="search.svg"
+                            alt="search icon"></i>
+                    <input type="text" placeholder="Type in search"
+                        class="search-input">
+                </div>
+            </div>
+
+            <div class="user-profile-group">
+                <button class="notification-button">
+                    <img src="notification-bell-icon.svg"
+                        alt="notification bell icon">
+
+                </button>
+
+                <div class="mode-selector">
+                    <label>
+                        <input type="radio" name="theme"
+                            onclick="setTheme('light')" checked>Light
+                    </label>
+
+                    <label>
+                        <input type="radio" name="theme"
+                            onclick="setTheme('dark')">Dark
+                    </label>
+
+                    <label>
+                        <input type="radio" name="theme"
+                            onclick="setTheme('gen-art')">Particles
+                    </label>
+
+                </div>
+
+                <span class="user-name">Beth Huntsman</span>
+                <img src="Profile Picture Woman.jpg" class="profile-pic"
+                    alt="profile picture">
+            </div>
+
+        </header>
+
+        
+
+
+        <div class="app-container">
+
+            <nav class="sidebar">
+                <h2 class="logo">Connect</h2>
+                <ul>
+                    <li class="nav-item">
+                        <span class="icon-left">
+                            <img src="home-icon.svg" alt="home icon" ></span>
+                        <span><a href="Quora-Rebrand.html">Home</a></span></li>
+
+                    <li class="nav-item"><span class="icon-left">
+                            <img src="user-profile-icon.svg"
+                                alt="user pfp icon"></span> <span>Profile</span></li>
+
+                    <li class="nav-item"><span class="icon-left">
+                            <img src="file-line-icon.svg"
+                                alt="user pfp icon"></span> <span>Following</span></li>
+
+                    <li class="nav-item"><span class="icon-left">
+                            <img src="chat-message-icon.svg"
+                                alt="user pfp icon"></span> <span>Messages</span></li>
+
+                    <li class="nav-item"><span class="icon-left">
+                            <img src="play-round-icon.svg"
+                                alt="user pfp icon"></span> <span>short-videos</span></li>
+
+                    <li class="nav-item"><span class="icon-left">
+                            <img src="file-line-icon.svg"
+                                alt="user pfp icon"></span> <span>Messages</span></li>
+
+                </ul>
+            </nav>
+
+            <div class="video-section">
+                <div class="video-container">
+                    <img  id="video-bg"  src="background1059857165.png" alt="backgrounnd">
+
+                    <video id="main-video" autoplay loop muted>
+                        <source src="116648-708909801_small.webm" type="video/webm">
+
+                    </video>
+
+
+                    <div class="video-actions">
+                        <button class="action-btn2 Upvote" onclick="toggleUpvote(this)">
+                            <img src="angle-top-icon.svg" alt="upvote">
+                        </button>
+
+                        <button class="action-btn2 downvote" >
+                            <img src="angle-bottom-icon.svg" alt="downvote">
+                        </button>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+                <div class="video-description">
+                    <h3>Chroma key trial</h3>
+                    <P class="author">@Kitty Videos</P>
+                    <div> 28th Feb 2026</div>
+                    <p class="bio"> this is a cat video with blend mode of screen while we try to intergrate and effective chroma key on Quora
+                    </p>
+                    <p class="tags">
+                        <span>#ChromaKey</span><span>#CatVideos</span>
+                    </p>
+                </div>
+            </div>
+
+            
+
+
+            <aside class="info-panel">
+                <section class="events">
+                    <h3>Upcoming Social Events</h3>
+                    <div class="event-item"> Garden BBQ -June 16</div>
+
+                    <div class="event-item"> Fireworks Festival -June 19</div>
+
+                    <div class="event-item"> Pottery Social event -June 30</div>
+
+                    <h3>Community Chats</h3>
+
+                    <div class="event-item"> <img class="other-pfp"
+                            src="Cat_November_2010-1a.png"> Cat Lovers</div>
+
+                    <div class="event-item"> <img class="other-pfp"
+                            src="images.png"> Pottery club</div>
+
+                </section>
+            </aside>
+        </div>
+
+
+
+
+</body>
+
+</html>

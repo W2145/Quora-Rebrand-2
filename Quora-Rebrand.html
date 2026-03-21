@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quora </title>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <link rel="stylesheet" href="Quora-CSS.css">
+        <link rel="icon" type="image/x-icon" href="quora-icon.svg">
+
+    </head>
+    <body>
+
+        <div id="particles-js"></div>
+
+        <header class="main-header">
+
+            <div class="header-left">
+                <img src="logo.svg" alt="logo">
+
+            </div>
+
+            <div class="search-container">
+                <div class="search-bar-cover">
+                    <i class="search-icon"><img src="search.svg"
+                            alt="search icon"></i>
+                    <input type="text" placeholder="Type in search"
+                        class="search-input">
+                </div>
+            </div>
+
+            <div class="user-profile-group">
+                <button class="notification-button">
+                    <img src="notification-bell-icon.svg"
+                        alt="notification bell icon">
+
+                </button>
+
+                <div class="mode-selector">
+                    <label>
+                        <input type="radio" name="theme"
+                            onclick="setTheme('light')" checked>Light
+                    </label>
+
+                    <label>
+                        <input type="radio" name="theme"
+                            onclick="setTheme('dark')">Dark
+                    </label>
+
+                    <label>
+                        <input type="radio" name="theme"
+                            onclick="setTheme('gen-art')">Particles
+                    </label>
+
+                </div>
+
+                <span class="user-name">Beth Huntsman</span>
+                <img src="Profile Picture Woman.jpg" class="profile-pic"
+                    alt="profile picture">
+            </div>
+
+        </header>
+
+        <div class="app-container">
+
+            <nav class="sidebar">
+                <h2 class="logo">Connect</h2>
+                <ul>
+                    <li class="nav-item">
+                        <span class="icon-left">
+                            <img src="home-icon.svg" alt="home icon"></span>
+                        <span>Home</span></li>
+
+                    <li class="nav-item"><span class="icon-left">
+                            <img src="user-profile-icon.svg"
+                                alt="user pfp icon"></span> <span>Profile</span></li>
+
+                    <li class="nav-item"><span class="icon-left">
+                            <img src="file-line-icon.svg"
+                                alt="user pfp icon"></span> <span>Following</span></li>
+
+                    <li class="nav-item"><span class="icon-left">
+                            <img src="chat-message-icon.svg"
+                                alt="user pfp icon"></span> <span>Messages</span></li>
+
+                    <li class="nav-item"><span class="icon-left">
+                            <img src="play-round-icon.svg"
+                                alt="user pfp icon"></span> <span><a href="Quora-shorts.html">short-videos</a></span></li>
+
+                    <li class="nav-item"><span class="icon-left">
+                            <img src="file-line-icon.svg"
+                                alt="user pfp icon"></span> <span>Messages</span></li>
+
+                </ul>
+            </nav>
+
+            <main class="feed">
+
+                <div class="input-container">
+                    <input type="text"
+                        placeholder="What do you want to Ask or Share?"
+                        class="post-input">
+                    <button class="insert-media" title="Insert Image or Video">
+                        <span class="icon"><img src="clip-icon.svg"
+                                alt="clip-icon"></span>
+                    </button>
+                </div>
+
+                <div class="action-bar">
+
+                    <button class="action-button">
+                        <span class="icon">&#x2754;</span>
+                        <span>Ask</span>
+
+                    </button>
+
+                    <div class="separator"></div>
+
+                    <button class="action-button">
+                        <span class="icon">&#x1F4C4;</span>
+                        <span>Answer</span>
+                    </button>
+
+                    <div class="separator"></div>
+
+                    <button class="action-button">
+                        <span class="icon">✎</span>
+                        <span>Post</span>
+                    </button>
+
+                </div>
+
+                <div class="card">
+                    <li class="nav-item"><span class="icon-left">
+                            <img src="jeffrey.png"
+                                alt="user pfp icon" class="other-pfp"></span>
+                        <span>Jeffrey Paul</span>
+                        <span> <button class="follow-button">+ Follow</button></span>
+
+                    </li>
+
+                    <div class="card-header"></div>
+                    <h2>Cool Barbeque</h2>
+                    <p>I thank john sins for inviting me to a great barbeque
+                        party, The party was very exquisite </p>
+                    <div class="card-images">
+                        <img
+                            src="friends-drinking-while-grilling-outside.png">
+                    </div>
+
+                    <div class="action-bar">
+                        <button class="action-button" onclick="toggleUpvote(this)">
+                            <span class="icon"> <img
+                                    src="arrow-top-icon.svg"
+                                    alt="upvote"></span>
+                            <span>Upvote</span>
+
+                        </button>
+
+                        <div class="separator"></div>
+
+                        <button class="action-button">
+                            <span class="icon"> <img
+                                    src="speech-bubble-icon.svg"
+                                    alt="speech bubble icon"></span>
+                            <span>Comment</span>
+                        </button>
+
+                        <div class="separator"></div>
+
+                        <button class="action-button">
+                            <span class="icon"><img
+                                    src="refresh-icon.svg"></span>
+                            <span>Repost</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="card">
+                    <li class="nav-item"><span class="icon-left">
+                            <img src="profile picture man.png"
+                                alt="user pfp icon" class="other-pfp"></span>
+                        <span>Marcus Jacobs</span>
+                        <span> <button class="follow-button">+ Follow</button></span>
+
+                    </li>
+
+                    <div class="card-header"></div>
+                    <h2>Trip to Zanzibar</h2>
+                    <p>my wife prepared a trip... I am planning for a vacation
+                        in Zanzibar with my wife for about 10 days. I need an
+                        accommodation that is affordable for a new couple and at
+                        a central place to nice places.
+                        Will appreciate someone who can help me plan for this
+                        trip which is coming next year summer.</p>
+                    <div class="card-images">
+                        <img src="zanzibar post.png">
+                    </div>
+
+                    <div class="action-bar">
+                        <button class="action-button" onclick="toggleUpvote(this)">
+                            <span class="icon"> <img
+                                    src="arrow-top-icon.svg"
+                                    alt="upvote"></span>
+                            <span>Upvote</span>
+
+                        </button>
+
+                        <div class="separator"></div>
+
+                        <button class="action-button">
+                            <span class="icon"> <img
+                                    src="speech-bubble-icon.svg"
+                                    alt="speech bubble icon"></span>
+                            <span>Comment</span>
+                        </button>
+
+                        <div class="separator"></div>
+
+                        <button class="action-button">
+                            <span class="icon"><img
+                                    src="refresh-icon.svg"></span>
+                            <span>Repost</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            
+            <div class="card">
+                <li class="nav-item"><span class="icon-left">
+                        <img
+                            src="portrait-interesting-young-man-winter-clothes_158595-915.png"
+                            alt="user pfp icon" class="other-pfp"></span>
+                    <span>Nathan Stevenson</span>
+                    <span> <button class="follow-button">+ Follow</button></span>
+
+                </li>
+
+                <div class="card-header"></div>
+                <h2>Are you using your brain to its full potential?</h2>
+                <p> In fact, scientists believe that we use our entire brain
+                    every day. Mila Halgren is a graduate student in the lab of
+                    Mark Harnett, an associate professor of brain and cognitive
+                    sciences and an investigator at the McGovern Institute. The
+                    Harnett lab studies the computational power of neurons, that
+                    is, how neural networks rapidly process massive amounts of
+                    information.
+
+                    “All of our brain is constantly in use and consumes a
+                    tremendous amount of energy,” Halgren says. “Despite making
+                    up only two percent of our body weight, it devours 20
+                    percent of our calories.” This doesn’t appear to change
+                    significantly with different tasks, from typing on a
+                    computer to doing yoga. “Even while we sleep, our entire
+                    brain remains intensely active</p>
+                <div class="card-images">
+                    <img
+                        src="CLIPAREA l Custom media_BrainShrink_Shutterstock_0.png">
+                </div>
+
+                <div class="action-bar">
+                    <button class="action-button" onClick="toggleUpvote(this)">
+                        <span class="icon"> <img
+                                src="arrow-top-icon.svg"
+                                alt="upvote"></span>
+                        <span>Upvote</span>
+
+                    </button>
+
+                    <div class="separator"></div>
+
+                    <button class="action-button">
+                        <span class="icon"> <img
+                                src="speech-bubble-icon.svg"
+                                alt="speech bubble icon"></span>
+                        <span>Comment</span>
+                    </button>
+
+                    <div class="separator"></div>
+
+                    <button class="action-button">
+                        <span class="icon"><img
+                                src="refresh-icon.svg"></span>
+                        <span>Repost</span>
+                    </button>
+
+                </div>
+
+            </main>
+
+            <aside class="info-panel">
+                <section class="events">
+                    <h3>Upcoming Social Events</h3>
+                    <div class="event-item"> Garden BBQ -June 16</div>
+
+                    <div class="event-item"> Fireworks Festival -June 19</div>
+
+                    <div class="event-item"> Pottery Social event -June 30</div>
+
+                    <h3>Community Chats</h3>
+
+                    <div class="event-item"> <img class="other-pfp"
+                            src="Cat_November_2010-1a.png"> Cat Lovers</div>
+
+                    <div class="event-item"> <img class="other-pfp"
+                            src="images.png"> Pottery club</div>
+
+                </section>
+            </aside>
+        </div>
+    </body>
+
+    <script src="Quora_JS.js"></script>
+</html>
