@@ -64,12 +64,23 @@ function setTheme(themeName) {
 }
 
 
+const canvas = document.getElementById('KnowledgeMap')
+const ctx = canvas.getContext('2d')
 
+canvas.addEventListener('mousemove', (e) => {
+    
+})
 
 
 
 function toggleUpvote(button){
     button.classList.toggle('clicked')
+
+    const upvoteSound = new Audio('audio/ding sound effect.mp3')
+    upvoteSound.volume = 0.5;
+    upvoteSound.play();
+
+
 }
 
 
