@@ -30,11 +30,35 @@
             </div>
 
             <div class="user-profile-group">
+
+
+                <div>
+                <button id="mutetoggle" class="notification-button" onclick="toggleMute()">
+                    <span id="muteIcon">🔊</span>
+                </button>
+                </div>
+
+
+
+
+
+
+
+
                 <button class="notification-button">
                     <img src="icons/notification-bell-icon.svg"
                         alt="notification bell icon">
 
                 </button>
+
+                
+
+
+
+
+
+
+
 
                 <div class="mode-selector">
                     <label>
@@ -94,7 +118,14 @@
                 </ul>
             </nav>
 
+
+             
+
+
+
             <main class="feed">
+                <canvas id="KnowledgeMap"> </canvas>
+
 
                 <div class="input-container">
                     <input type="text"
@@ -130,7 +161,7 @@
 
                 </div>
 
-                <div class="card">
+                <div class="card" onmouseenter="playHoverSound()" onmouseleave="stopHoverSound()">
                     <li class="nav-item"><span class="icon-left">
                             <img src="images/jeffrey.png"
                                 alt="user pfp icon" class="other-pfp"></span>
@@ -139,8 +170,9 @@
 
                     </li>
 
-                    <div class="card-header"></div>
+                    <div class="card-header" onmouseenter="playHoverSound()"></div>
                     <h2>Cool Barbeque</h2>
+                    <h3>🔊 Upbeat 1(Blooming Sunshine)</h3>
                     <p>I thank john sins for inviting me to a great barbeque
                         party, The party was very exquisite </p>
                     <div class="card-images">
@@ -178,17 +210,19 @@
 
                 </div>
 
-                <div class="card">
+                <div class="card" onmouseenter="playHoverSound2()" onmouseleave="stopHoverSound()">
                     <li class="nav-item"><span class="icon-left">
                             <img src="images/profile picture man.png"
                                 alt="user pfp icon" class="other-pfp"></span>
                         <span>Marcus Jacobs</span>
+                        
                         <span> <button class="follow-button">+ Follow</button></span>
 
                     </li>
 
                     <div class="card-header"></div>
                     <h2>Trip to Zanzibar</h2>
+                    <h3>🔊 Upbeat 2(Raining Wind)</h3>
                     <p>my wife prepared a trip... I am planning for a vacation
                         in Zanzibar with my wife for about 10 days. I need an
                         accommodation that is affordable for a new couple and at
@@ -230,18 +264,20 @@
                 </div>
 
             
-            <div class="card">
+            <div class="card" onmouseenter="playHoverSound3()" onmouseleave="stopHoverSound()">
                 <li class="nav-item"><span class="icon-left">
                         <img
                             src="images/portrait-interesting-young-man-winter-clothes_158595-915.png"
                             alt="user pfp icon" class="other-pfp"></span>
                     <span>Nathan Stevenson</span>
+                    
                     <span> <button class="follow-button">+ Follow</button></span>
 
                 </li>
 
                 <div class="card-header"></div>
                 <h2>Are you using your brain to its full potential?</h2>
+                <h3>🔊 Upbeat 3(Mind mover)</h3>
                 <p> In fact, scientists believe that we use our entire brain
                     every day. Mila Halgren is a graduate student in the lab of
                     Mark Harnett, an associate professor of brain and cognitive
@@ -290,7 +326,7 @@
 
                 </div>
 
-                <canvas id="KnowledgeMap"></canvas>
+             
 
             </main>
 

@@ -68,12 +68,15 @@ const canvas = document.getElementById('KnowledgeMap')
 const ctx = canvas.getContext('2d')
 
 canvas.addEventListener('mousemove', (e) => {
-    
+
 })
 
 
 
 function toggleUpvote(button){
+
+    if (isMuted) return;
+
     button.classList.toggle('clicked')
 
     const upvoteSound = new Audio('audio/ding sound effect.mp3')
@@ -84,4 +87,110 @@ function toggleUpvote(button){
 }
 
 
+let isMuted = false;
+
+
+
+function toggleMute(){
+    isMuted = !isMuted;
+    const muteIcon = document.getElementById('muteIcon');
+
+    if (isMuted){
+        muteIcon.innerText = "🔇";
+
+        if(currentAudio){
+            currentAudio.pause();
+        }
+    } else{
+        muteIcon.innerText = "🔊";
+    }
+}
+
+
+
+
+
+
+
+
+
+let currentAudio = null;
+
+function playHoverSound(){
+
+    if (isMuted) return;
+
+    if (currentAudio){
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+    }
+
+    currentAudio = new Audio('audio/upbeat 1.mp3')
+    currentAudio.volume = 0.3
+
+    currentAudio.play().catch(error => {
+        console.log("file missing for upbeat1", error);
+    });
+}
+
+function playHoverSound2(){
+
+    if (isMuted) return;
+
+    if (currentAudio){
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+    }
+
+    currentAudio = new Audio('audio/upbeat 2.mp3')
+    currentAudio.volume = 0.3
+
+    currentAudio.play().catch(error => {
+        console.log("file missing for upbeat1", error);
+    });
+}
+
+function playHoverSound3(){
+
+    if (isMuted) return;
+
+    if (currentAudio){
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+    }
+
+    currentAudio = new Audio('audio/upbeat 3.mp3')
+    currentAudio.volume = 0.3
+
+    currentAudio.play().catch(error => {
+        console.log("file missing for upbeat1", error);
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function stopHoverSound(){
+    if (currentAudio){
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+    }
+}
 
