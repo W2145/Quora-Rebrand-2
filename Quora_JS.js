@@ -63,13 +63,26 @@ function setTheme(themeName) {
     
 }
 
+let currentAudio = null;
 
-const canvas = document.getElementById('KnowledgeMap')
-const ctx = canvas.getContext('2d')
 
-canvas.addEventListener('mousemove', (e) => {
+let isMuted = false;
 
-})
+
+
+
+
+
+
+
+
+const canvas2 = document.getElementById('KnowledgeMap')
+
+
+
+
+
+
 
 
 
@@ -87,7 +100,7 @@ function toggleUpvote(button){
 }
 
 
-let isMuted = false;
+
 
 
 
@@ -114,7 +127,7 @@ function toggleMute(){
 
 
 
-let currentAudio = null;
+
 
 function playHoverSound(){
 
@@ -193,4 +206,59 @@ function stopHoverSound(){
         currentAudio.currentTime = 0;
     }
 }
+
+
+
+
+const video = document.getElementById('videoSource');
+
+const canvas = document.getElementById('chromaCanvas');
+const ctx = canvas.getContext('2d', {willReadFrequently: true});
+
+
+
+video.addEventListener('play', () => {
+    function computeFrame(){
+        if (video.paused || video.ended) return;
+
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+
+        const frame = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        const length = frame.data.length;
+
+
+        for (let i = 0; i< length; i +=4){
+            let r = frame.data[i + 0];
+            let g = frame.data[i + 1];
+            let b = frame.data[i + 2];
+
+
+            if (g > r * 1.2 && g > b * 1.2  && g > 70){
+                frame.data[i + 3] = 0;
+            }
+
+        }
+
+        ctx.putImageData(frame, 0, 0);
+
+        requestAnimationFrame(computeFrame);
+
+    }
+
+    computeFrame();
+
+
+}); 
+
+
+
+
+
+
+
+
+
+
+
 
